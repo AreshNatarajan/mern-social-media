@@ -11,7 +11,7 @@ exports.getAll = async (req, res) => {
     }
     const decoded = jwt.verify(token, process.env.SECRET_KEY);
     const userId = decoded.email;  
-    console.log("Authenticated user ID:", userId);
+   
     const users = await userModel.find(); 
     return res.status(200).json(users);
   } catch (err) {

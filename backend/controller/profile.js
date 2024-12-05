@@ -9,7 +9,7 @@ exports.profile = async (req, res) => {
   if(!filename || !bio || !username) return rs.status(201).json({message : 'All data requierd'})
   
   let imgPath = `http://localhost:5000/uploads/${filename}`;
-  console.log("Image Path:", imgPath);
+ 
 
   try {
     const user = await userModel.findById(userId);

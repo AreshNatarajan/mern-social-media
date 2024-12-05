@@ -1,7 +1,7 @@
 exports.updateUserProfile = async (req, res) => {
     try {
       const { userId } = req.params; // Assuming the user ID is passed in the URL
-      console.log(req);
+      
       
       const { profilePhoto, followers, following, saved, username, email,  } = req.body;
 

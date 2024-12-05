@@ -10,7 +10,7 @@ exports.newpost = async (req, res) =>{
     const userId = req.body.id;
     const content = req.body.content;
     
-    console.log(content , 'connt');
+   
     
 
     let imgPath = `http://localhost:5000/uploads/${filename}`;

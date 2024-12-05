@@ -6,7 +6,7 @@ exports.singleuser = async(req, res)=>{
      
     try {
      const user  = await userModel.findById(id);
-     console.log(user, 'user');
+     
      
      if(!user){
           res.status(404).json({message: 'User not found'})

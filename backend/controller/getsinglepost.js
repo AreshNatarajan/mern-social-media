@@ -2,7 +2,7 @@ const userModel = require("../model/user");
 
 exports.getsinglepost = async (req, res) => {
   const { id, userId } = req.query; 
-  console.log(req.query);  
+   
 
   try {
     const user = await userModel.findById(userId);
@@ -10,7 +10,7 @@ exports.getsinglepost = async (req, res) => {
 
     const post = await user.posts.id(id)
     
-    console.log(post, 'single post');
+   
     if (!post) {
       return res.status(404).json({ message: "Post not found" });
     }

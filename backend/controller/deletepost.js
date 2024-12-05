@@ -2,7 +2,7 @@ const userModel = require("../model/user");
 
 exports.deletepost = async (req, res) =>{
    const {id , userId}  = req.query;
-   console.log(req.query);
+  
    
    try {
     const user = await userModel.findById(userId)
@@ -11,7 +11,7 @@ exports.deletepost = async (req, res) =>{
     }
     const postIndex  = await user.posts.findIndex((post)=> post._id.toString() === id)
 
-    console.log(postIndex);
+    
     
     if(postIndex === -1) return res.status(404).json({message : 'Post not found'});
 

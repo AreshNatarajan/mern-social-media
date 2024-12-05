@@ -31,7 +31,7 @@ const Home = () => {
 
 
   const AllPost = ({ data }) => {
-    console.log(data, 'data');
+    
 
     return <>
       <div className="container-fluid">
