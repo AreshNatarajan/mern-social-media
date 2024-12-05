@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+.custom-form{
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  border-top: 0pc;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 2px solid black;
+  outline: none;
+  text-align: start;
+  background: transparent;
+}
+
+.upload-form{
+  padding: 5px;
+  outline: none;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid black;
+}
+
+.auth-hight{
+  min-height: 100%;
+}
+
+.auth-img{
+  width: 25%;
+}
+
+.toggler{
+  position: sticky;
+  top: 0;
+  right: 0;
+}
+
+.bg-toggler{
+  background-color:#ccc ;
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  border: 1px solid black;
+}
+
+.nav-bar{
+  height: 100vh;
+  position: sticky;
+  display: block;
+   left: 0;
+   top: 0;
+   z-index: 10;
+}
+
+.form{
+  width: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+.auth-img{
+  width: 10%;
+  margin: 10px auto 10px auto;
+}
+
+.profile-img{
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.profile-image{
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.form-div{
+  border: 1px solid black;
+  border-style: dashed;
+  height: 200px;
+  width: 300px;
+}
+
+.newpostdiv{
+  width: 50%;
+}
+.newposttextarea{
+  width: 100%;
+  border-right: 0;
+  border-top: none;
+  border-left: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+/* // profile */
+
+.photo-container{
+  columns: 3 200px;
+  gap: 30px;
+}
+.post-images{
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.home-images{
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.view-post{
+  position: relative;
+}
+.view-post-cancel{
+  position: absolute;
+  right: 10px;
+}
+.singlepost-img{
+  width: 50%;
+}
+
+.content{
+  font-size: 15px;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  background: linear-gradient(#dc1818 0 0) bottom/100% 0% no-repeat #ccc;
+  -webkit-mask: 
+    radial-gradient(circle at 60% 65%, #000 62%, #0000 65%) top left, 
+    radial-gradient(circle at 40% 65%, #000 62%, #0000 65%) top right, 
+    linear-gradient(to bottom left, #000 42%,#0000 43%) bottom left , 
+    linear-gradient(to bottom right,#000 42%,#0000 43%) bottom right;
+  -webkit-mask-size: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  animation: l19 2s infinite linear;
+}
+@keyframes l19 {
+    90%,100% {background-size:100% 100%}
+}
+
+
+@media (max-width:789px) {
+  .custom-img-col, .custom-form-col {
+    height: 50vh; 
+  }
+  .form{
+    width: 100%;
+  }
+  .auth-img{
+    width: 20%;
+  }
+  .navbar-col{
+    display: none;
+  } 
+  .nav-toggler{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  .nav-bar{
+    position: fixed;
+  }
+
+  .sidebar{
+    display: none;
+  }
+
+.profile-image{
+  width: 200px;
+  height: 200px;
+}
+
+.newpostdiv{
+  width: 100%;
+}
+
+.singlepost-img{
+  width: 100%;
+}
+
+
+}
+
+@media (min-width: 768px) {
+  .custom-img-col, .custom-form-col {
+    height: 100vh; /* 100% of the viewport height */
+  }
+
+}
+
+
+
