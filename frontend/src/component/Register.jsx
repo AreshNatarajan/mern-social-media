@@ -47,7 +47,7 @@ function Register() {
     const handelRegister = (e)=>{
        e.preventDefault()
         axios
-         .post("http://localhost:5000/app/register", {username : username, email : email, password : password})
+         .post("https://mern-social-media-backend-xqgq.onrender.com/app/register", {username : username, email : email, password : password})
          .then(res => {
             console.log(res.data.message)
            if(res.status === 200){

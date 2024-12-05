@@ -47,7 +47,7 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/app/login", { email: email, password: password })
+      .post("https://mern-social-media-backend-xqgq.onrender.com/app/login", { email: email, password: password })
       .then(res => {
         console.log(res, token);
         localStorage.removeItem('areshSocialMedia')

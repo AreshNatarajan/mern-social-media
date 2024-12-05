@@ -103,7 +103,7 @@ const ProfileUpdate = () => {
     formData.append('username', username)
     // here if condtion !
     await axios
-      .post("http://localhost:5000/app/profile", formData, { headers: { 'Content-Type': 'multipart/form-data', } })
+      .post("https://mern-social-media-backend-xqgq.onrender.com/app/profile", formData, { headers: { 'Content-Type': 'multipart/form-data', } })
       .then(res => {
         setUserDetail(res.data.user)
       

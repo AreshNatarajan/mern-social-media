@@ -89,7 +89,7 @@ const Post = () => {
     formData.append('content', content)
     formData.append('id', userDetail._id)
     axios
-      .post("http://localhost:5000/app/newpost", formData, { headers: { 'Content-Type': 'multipart/form-data', } })
+      .post("https://mern-social-media-backend-xqgq.onrender.com/app/newpost", formData, { headers: { 'Content-Type': 'multipart/form-data', } })
       .then(res => {
         console.log(res.data);
         setUserDetail(res.data.data)

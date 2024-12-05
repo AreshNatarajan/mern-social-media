@@ -7,14 +7,14 @@ import { myContext } from '../App';
 
 const Home = () => {
 
-  console.log(apicongif);
+ 
   
   const [allpost, setAllpost] = useState(null)
   const { setAllusers } = useContext(myContext)
   const [isLiked, setLiked] = useState(null)
   const fetchData = async () => {
     axios
-      .get("http://localhost:5000/app/getallpost")
+      .get("https://mern-social-media-backend-xqgq.onrender.com/app/getallpost")
       .then(res => {
         setAllpost(res.data.data)
         setAllusers(res.data.users)
@@ -27,9 +27,9 @@ const Home = () => {
   }, [])
 
 
-  const handleLike = () => {
-    setLiked(!isLiked)
-  }
+  // const handleLike = () => {
+  //   setLiked(!isLiked)
+  // }
 
 
   const AllPost = ({ data }) => {

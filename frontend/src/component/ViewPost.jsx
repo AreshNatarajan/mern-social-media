@@ -50,7 +50,7 @@ function ViewPost() {
 
     const fetchdata = async()=>{
       await  axios
-        .get(`http://localhost:5000/app/singlepost`, {params : {id : id , userId : userid}})
+        .get(`https://mern-social-media-backend-xqgq.onrender.com/app/singlepost`, {params : {id : id , userId : userid}})
         .then(res => {
             console.log(res);
             setPost(res.data.data)
@@ -60,7 +60,7 @@ function ViewPost() {
 
     const handleDeletePost  = async () =>{
      await  axios
-        .delete("http://localhost:5000/app/deletepost", {params: {id : id , userId : userid}})
+        .delete("https://mern-social-media-backend-xqgq.onrender.com/app/deletepost", {params: {id : id , userId : userid}})
         .then(res =>{
           setUserDetail(res.data.data)
            if(res.status === 200){
@@ -77,7 +77,7 @@ function ViewPost() {
        fetchdata()
     },[])
 
-    console.log(post, 'single post');
+    
     
      
     const PostDetails = ({post})=>{
