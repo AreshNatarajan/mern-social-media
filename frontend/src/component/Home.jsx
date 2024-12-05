@@ -2,11 +2,13 @@ import React, { useEffect, useState, useContext } from 'react'
 import axios from "axios";
 import Loader from './Loader'
 import { Link } from 'react-router-dom'
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import apicongif from '../config'
 import { myContext } from '../App';
 
 const Home = () => {
 
+  console.log(apicongif);
+  
   const [allpost, setAllpost] = useState(null)
   const { setAllusers } = useContext(myContext)
   const [isLiked, setLiked] = useState(null)
