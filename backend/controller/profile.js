@@ -8,7 +8,7 @@ exports.profile = async (req, res) => {
 
   if(!filename || !bio || !username) return rs.status(201).json({message : 'All data requierd'})
   
-  let imgPath = `http://localhost:5000/uploads/${filename}`;
+  let imgPath = `https://mern-social-media-backend-xqgq.onrender.com/uploads/${filename}`;
  
 
   try {
