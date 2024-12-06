@@ -39,7 +39,7 @@ const Home = () => {
       <div className="container-fluid">
         <div className="photo-container">
           {data.map((item) => (
-            <div key={item._id} className="home-images text-decoration-none">
+            <div key={item._id} className="home-images d-flex flex-column text-decoration-none">
               <Link to={`/singlepost/${item.userID}`} key={item._id}>
                 <img className='img-fluid' src={item.image} alt={item.image} />
               </Link>
