@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react'
 import axios from "axios";
 import Loader from './Loader'
 import { Link } from 'react-router-dom'
-import apicongif from '../config'
+
 import { myContext } from '../App';
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
   
   const [allpost, setAllpost] = useState(null)
   const { setAllusers } = useContext(myContext)
-  const [isLiked, setLiked] = useState(null)
+ 
   const fetchData = async () => {
     axios
       .get("https://mern-social-media-backend-xqgq.onrender.com/app/getallpost")

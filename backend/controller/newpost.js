@@ -13,7 +13,7 @@ exports.newpost = async (req, res) =>{
    
     
 
-    let imgPath = `http://localhost:5000/uploads/${filename}`;
+    let imgPath = `https://mern-social-media-backend-xqgq.onrender.com/uploads/${filename}`;
     try {
         const user = await userModel.findById(userId);
         if (!user) {

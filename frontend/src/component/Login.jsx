@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function Login() {
-  const { email, setEmail, password, setPassword, token, setToken, userDetail, setUserDetail } = useContext(myContext)
+  const { email, setEmail, password, setPassword, token, setToken, setUserDetail } = useContext(myContext)
   const navigate = useNavigate()
 
   const notifySuccess = (msg) => {

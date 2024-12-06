@@ -61,6 +61,8 @@ const Post = () => {
         setImage(file)
         setImageName(file.name)
         const imageUrl = URL.createObjectURL(file);
+        console.log(imageUrl, 'url');
+        
         setImageUrl(imageUrl);
       }else{
         notifyError('Only image files are allowed!')
