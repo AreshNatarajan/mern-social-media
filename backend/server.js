@@ -20,16 +20,20 @@ const singleuser = require('./router/singleuser')
 const connection = require("./config/connection");
 connection();
 
-const corsOptions = {
-    origin: 'https://mern-social-media-frontend-ik8o.onrender.com', 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],  
-    allowedHeaders: ['Content-Type', 'Authorization'],  
-    credentials: true,  
-  };
 
 
-  app.options('*', cors(corsOptions)); 
-  app.use(express.json())
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://mern-social-media-frontend-ik8o.onrender.com");
+    res.header(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+});
+
+
+app.use(cors())
+app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
