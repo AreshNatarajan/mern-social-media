@@ -1,5 +1,7 @@
 # MERN Stack Social Media App
 
+
+
 ## Description
 This is a social media app built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). The app allows users to register, log in, and interact with a dynamic feed of posts uploaded by all users. It also includes features for managing user profiles and posts.
 
@@ -33,4 +35,4 @@ This is a social media app built using the MERN stack (MongoDB, Express.js, Reac
 ## Installation
 1. Clone the repository:  
    ```bash
-   git clone 
+   git clone https://github.com/AreshNatarajan/mern-social-media.git
